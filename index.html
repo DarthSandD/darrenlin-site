@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darren Lin - AI Automation Builder</title>
+  <meta name="description" content="Darren Lin builds multi-model AI systems that execute real work. Autonomous workflows, agent orchestration, and production-grade automation." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV: Editorial Masthead -->
+  <header class="nav" data-reveal>
+    <div class="nav__inner">
+      <a href="#top" class="nav__wordmark">Darren Lin</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#hermes">Hermes</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="nav__rule"></div>
+  </header>
+
+  <!-- HERO: Statement fold with visual -->
+  <section class="hero" id="top">
+    <div class="hero__media" data-reveal>
+      <img src="assets/photos/hero-visual.jpg" alt="Technology workspace" class="hero__image" />
+      <div class="hero__media-overlay"></div>
+    </div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow" data-reveal>AI Automation Builder</p>
+      <h1 class="hero__headline" data-reveal>
+        Multi-model AI systems that execute real work.
+      </h1>
+      <p class="hero__subhead" data-reveal>
+        Agent orchestration, production pipelines, and the infrastructure that turns AI demos into shipped products.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#hermes" class="btn btn--primary">See Hermes</a>
+        <a href="#contact" class="btn btn--ghost">Start a project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK: Capabilities (cleaner, more visual) -->
+  <section class="section" id="work">
+    <div class="section__head" data-reveal>
+      <p class="section__index">01</p>
+      <h2 class="section__title">What I build</h2>
+    </div>
+
+    <div class="capabilities">
+      <div class="cap" data-reveal>
+        <div class="cap__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="cap__title">Orchestration</h3>
+        <p class="cap__desc">Multi-model routing with fallback chains. The right model for each task. Verification loops at every step.</p>
+      </div>
+      <div class="cap" data-reveal>
+        <div class="cap__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <h3 class="cap__title">Automation</h3>
+        <p class="cap__desc">Workflow pipelines that run on schedule. Cron jobs, content generation, data processing. Zero manual steps.</p>
+      </div>
+      <div class="cap" data-reveal>
+        <div class="cap__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="cap__title">Verification</h3>
+        <p class="cap__desc">Output validation, contrast checks, anti-slop scanning. No handoff without evidence. No assumed results.</p>
+      </div>
+      <div class="cap" data-reveal>
+        <div class="cap__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="cap__title">Integration</h3>
+        <p class="cap__desc">API wiring, Composio connectors, MCP servers, custom tooling. Every service talks to every other.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERMES: Project showcase (visual-forward) -->
+  <section class="hermes" id="hermes">
+    <div class="hermes__inner">
+      <div class="hermes__content" data-reveal>
+        <p class="hermes__eyebrow">Featured Project</p>
+        <h2 class="hermes__title">Hermes Agent</h2>
+        <p class="hermes__lede">
+          A multi-model autonomous intelligence system running on Hermes Agent. Orchestrates LongCat, Solar Pro, Ling, and Step as specialized cognitive modules, routing each subtask to the model best suited for it.
+        </p>
+        <ul class="hermes__features">
+          <li>Dynamic model routing with fallback chains</li>
+          <li>Tool-first execution: real tools, not simulations</li>
+          <li>Verification-scaled-by-consequence</li>
+          <li>Persistent memory + procedural learning</li>
+          <li>18 cron jobs running production pipelines</li>
+        </ul>
+        <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="noopener" class="btn btn--primary">Explore Hermes</a>
+      </div>
+      <div class="hermes__media" data-reveal>
+        <img src="assets/photos/orchestration.jpg" alt="Hermes orchestration visualization" class="hermes__image" />
+        <div class="hermes__media-accent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW: Process (cleaner, more visual) -->
+  <section class="section section--alt" id="process">
+    <div class="section__head" data-reveal>
+      <p class="section__index">02</p>
+      <h2 class="section__title">How I work</h2>
+    </div>
+
+    <div class="workflow">
+      <div class="workflow__step" data-reveal>
+        <div class="workflow__num">1</div>
+        <div class="workflow__body">
+          <h3>Discover</h3>
+          <p>Map the actual workflow. Find the bottleneck. Define what "done" looks like.</p>
+        </div>
+      </div>
+      <div class="workflow__step" data-reveal>
+        <div class="workflow__num">2</div>
+        <div class="workflow__body">
+          <h3>Design</h3>
+          <p>Pick the right model for each subtask. Plan the routing, the fallbacks, the verification.</p>
+        </div>
+      </div>
+      <div class="workflow__step" data-reveal>
+        <div class="workflow__num">3</div>
+        <div class="workflow__body">
+          <h3>Build</h3>
+          <p>Ship the pipeline. Wire the connectors. Set the cron. Every output tested, not assumed.</p>
+        </div>
+      </div>
+      <div class="workflow__step" data-reveal>
+        <div class="workflow__num">4</div>
+        <div class="workflow__body">
+          <h3>Verify</h3>
+          <p>Run the scans. Confirm the result against the actual objective. No handoff without evidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact" id="contact">
+    <div class="contact__inner" data-reveal>
+      <div class="contact__header">
+        <p class="contact__eyebrow">Get in touch</p>
+        <h2 class="contact__title">Have a workflow that should run itself?</h2>
+        <p class="contact__subhead">Tell me what you're trying to automate. I'll read every message and respond within two business days.</p>
+      </div>
+
+      <form class="form" id="contact-form">
+        <input type="hidden" name="apikey" value="" id="web3forms-key" />
+        <input type="hidden" name="subject" value="New inquiry from darrenlin.ai" />
+        <input type="hidden" name="from_name" value="Darren Lin - AI Automation Builder" />
+        <input type="checkbox" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <div class="form__row">
+          <div class="form__field">
+            <label for="form-name" class="form__label">Your name</label>
+            <input type="text" id="form-name" name="name" class="form__input" required placeholder="Your full name" />
+          </div>
+          <div class="form__field">
+            <label for="form-email" class="form__label">Email</label>
+            <input type="email" id="form-email" name="email" class="form__input" required placeholder="your@email.com" />
+          </div>
+        </div>
+
+        <div class="form__field">
+          <label for="form-company" class="form__label">Company <span class="form__optional">optional</span></label>
+          <input type="text" id="form-company" name="company" class="form__input" placeholder="Your company name" />
+        </div>
+
+        <div class="form__field">
+          <label for="form-budget" class="form__label">Budget range <span class="form__optional">optional</span></label>
+          <select id="form-budget" name="budget" class="form__input form__select">
+            <option value="" disabled selected>Select a range</option>
+            <option value="under-5k">Under $5k</option>
+            <option value="5k-15k">$5k – $15k</option>
+            <option value="15k-50k">$15k – $50k</option>
+            <option value="50k-plus">$50k+</option>
+          </select>
+        </div>
+
+        <div class="form__field">
+          <label for="form-message" class="form__label">Project description</label>
+          <textarea id="form-message" name="message" class="form__input form__textarea" rows="5" required placeholder="Describe the workflow you want automated. Current tools, volume, where it breaks, what 'done' looks like."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--large form__submit" id="form-submit">
+          Send brief
+        </button>
+
+        <div class="form__feedback" id="form-feedback" role="status" aria-live="polite"></div>
+      </form>
+
+      <p class="contact__note">Currently available for two engagements per month.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <p class="footer__wordmark">Darren Lin</p>
+        <p class="footer__tagline">AI Automation Builder</p>
+      </div>
+      <div class="footer__meta">
+        <p>&copy; 2026 Darren Lin</p>
+        <p>Built with Hermes Agent</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="reveal.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "publishes": {
+    "lemon-anvil-28kk": {
+      "siteUrl": "https://lemon-anvil-28kk.here.now/",
+      "claimToken": "1uXra7a30gvC_nfH",
+      "claimUrl": "https://here.now/c/1uXra7a30gvC_nfH",
+      "versionId": "01M2BS3K3VGTBD96SHG969F4JG",
+      "expiresAt": "2026-09-13T21:41:49.819Z"
+    },
+    "civic-mustard-afg6": {
+      "siteUrl": "https://civic-mustard-afg6.here.now/",
+      "claimToken": "k8xNXMzfkJup5_4b",
+      "claimUrl": "https://here.now/c/k8xNXMzfkJup5_4b",
+      "versionId": "01M2BT8Z97NFV181TQA4C0GZGR",
+      "expiresAt": "2026-09-13T22:02:14.695Z"
+    }
+  }
+}
