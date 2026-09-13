@@ -1,6 +1,6 @@
 // Reviews - save to Cloudflare Worker API + KV (shared across all visitors)
 (function () {
-  var API = '/api/reviews';
+  var API = 'https://darrenlin-reviews.darthsandd.workers.dev';
 
   function starStr(n) {
     return '★'.repeat(n) + '☆'.repeat(5 - n);

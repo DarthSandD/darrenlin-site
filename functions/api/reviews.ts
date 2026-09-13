@@ -1,11 +1,3 @@
-/**
- * darrenlin-reviews worker
- * 
- * GET /api/reviews  — list all reviews (public)
- * POST /api/reviews — submit a review (rate-limited, no auth)
- * 
- * Storage: Cloudflare KV (namespace: REVIEWS)
- */
 export interface Env {
   REVIEWS: KVNamespace;
 }
@@ -30,14 +22,14 @@ function validateReview(body: any): { ok: boolean; error?: string; data?: any } 
   const name = (body.name || '').trim();
   const review = (body.review || '').trim();
   const rating = parseInt(body.rating, 10);
-  if (!name || name.length < 2) return { ok: false, error: 'Name is required' };
-  if (!review || review.length < 5) return { ok: false, error: 'Review must be at least 5 characters' };
-  if (!rating || rating < 1 || rating > 5) return { ok: false, error: 'Rating must be 1-5' };
+  if (!name || name.length < 2) return { ok: false, error: 'Name required' };
+  if (!review || review.length < 5) return { ok: false, error: 'Review too short' };
+  if (!rating || rating < 1 || rating > 5) return { ok: false, error: 'Rating 1-5' };
   return {
     ok: true,
     data: {
       name: name.slice(0, 80),
-      role: (body.role || '').slice(0, 80),
+      role: ((body.role || '').toString()).slice(0, 80),
       rating,
       review: review.slice(0, 500),
       ts: Date.now(),
@@ -49,20 +41,18 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     if (request.method === 'OPTIONS') return json(null);
 
-    // GET reviews
     if (request.method === 'GET') {
       const raw = await env.REVIEWS.get(REVIEW_KEY);
       const reviews = raw ? JSON.parse(raw) : [];
       return json({ success: true, data: reviews });
     }
 
-    // POST review
     if (request.method === 'POST') {
       const ip = request.headers.get('cf-connecting-ip') || 'unknown';
       const rate_key = `rate_${ip}`;
       const current = parseInt((await env.REVIEWS.get(rate_key)) || '0', 10);
       if (current >= MAX_PER_HOUR) {
-        return json({ success: false, error: 'Rate limit — try again later' }, 429);
+        return json({ success: false, error: 'Rate limit — try later' }, 429);
       }
 
       let body: any;
@@ -78,8 +68,6 @@ export default {
       const raw = await env.REVIEWS.get(REVIEW_KEY);
       const reviews = raw ? JSON.parse(raw) : [];
       reviews.unshift(result.data);
-
-      // Keep max 500 reviews
       if (reviews.length > 500) reviews.length = 500;
 
       await env.REVIEWS.put(REVIEW_KEY, JSON.stringify(reviews));
