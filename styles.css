@@ -292,6 +292,15 @@ h1, h2, h3 {
   padding: var(--space-32) var(--space-6);
   background: var(--surface);
 }
+.hermes--plain {
+  background: var(--bg);
+}
+.hermes__inner--flip {
+  direction: rtl;
+}
+.hermes__inner--flip > * {
+  direction: ltr;
+}
 .hermes__inner {
   max-width: 1100px;
   margin: 0 auto;
