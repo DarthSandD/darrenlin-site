@@ -36,9 +36,11 @@
     var feedback = document.getElementById('review-feedback');
     if (!listEl) return;
 
-    // Load reviews from shared API
-    fetch(API)
-      .then(function (r) { return r.json(); })
+    // Load reviews from shared API (with timeout)
+    var loadCtrl = new AbortController();
+    var loadT = setTimeout(function () { loadCtrl.abort(); }, 8000);
+    fetch(API, { signal: loadCtrl.signal })
+      .then(function (r) { clearTimeout(loadT); return r.json(); })
       .then(function (data) {
         if (data.success) render(data.data, listEl, emptyEl);
       })
@@ -63,12 +65,15 @@
 
         feedback.textContent = 'Saving...';
 
+        var ctrl = new AbortController();
+        var t = setTimeout(function () { ctrl.abort(); }, 8000);
         fetch(API, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(body)
+          body: JSON.stringify(body),
+          signal: ctrl.signal
         })
-          .then(function (r) { return r.json(); })
+          .then(function (r) { clearTimeout(t); return r.json(); })
           .then(function (data) {
             if (data.success) {
               form.reset();
@@ -82,7 +87,9 @@
           .then(function (data) {
             if (data.success) render(data.data, listEl, emptyEl);
           })
-          .catch(function () {});
+          .catch(function () {
+            feedback.textContent = 'Failed to save. Please try again.';
+          });
       });
     }
 
