@@ -561,6 +561,68 @@ h1, h2, h3 {
   .form__row { grid-template-columns: 1fr; }
 }
 
+
+/* ==================== REVIEWS ==================== */
+.reviews {
+  padding: var(--space-32) var(--space-6);
+  background: var(--bg);
+}
+.reviews__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.reviews__list {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+.reviews__empty {
+  text-align: center;
+  padding: var(--space-16) 0;
+  opacity: 0.5;
+  font-size: 0.95rem;
+}
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+}
+.review-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-4);
+  gap: var(--space-4);
+}
+.review-card__name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.review-card__role {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-top: var(--space-1);
+}
+.review-card__stars {
+  color: var(--primary);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+.review-card__text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  opacity: 0.85;
+}
+.reviews-form {
+  background: var(--surface);
+}
+.reviews-form .contact__header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
 /* ==================== FOOTER ==================== */
 .footer {
   padding: var(--space-16) var(--space-6);

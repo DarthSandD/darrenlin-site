@@ -25,6 +25,7 @@
         <a href="#work">Work</a>
         <a href="#hermes">Hermes</a>
         <a href="#contact">Contact</a>
+        <a href="#reviews">Reviews</a>
       </nav>
     </div>
     <div class="nav__rule"></div>
@@ -325,6 +326,61 @@
     </div>
   </section>
 
+  <!-- CLIENT REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="reviews__inner" data-reveal>
+      <div class="section__head">
+        <p class="section__index">03</p>
+        <h2 class="section__title">Client reviews</h2>
+      </div>
+      <div class="reviews__list" id="reviews-list"></div>
+      <div class="reviews__empty" id="reviews-empty">No reviews yet. Be the first.</div>
+    </div>
+  </section>
+
+  <!-- REVIEW FORM -->
+  <section class="contact reviews-form" id="review-form">
+    <div class="contact__inner" data-reveal>
+      <div class="contact__header">
+        <p class="contact__eyebrow">Leave a review</p>
+        <h2 class="contact__title">How was your experience?</h2>
+      </div>
+      <form class="form" id="review-form-el">
+        <input type="hidden" name="apikey" value="" id="review-web3forms-key" />
+        <input type="hidden" name="subject" value="New client review for Darren Lin" />
+        <input type="hidden" name="from_name" value="Darren Lin - AI Automation Builder" />
+        <input type="checkbox" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <div class="form__row">
+          <div class="form__field">
+            <label class="form__label" for="rev-name">Your name</label>
+            <input class="form__input" type="text" id="rev-name" name="name" required placeholder="Your full name" />
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="rev-role">Role / Company <span class="form__optional">optional</span></label>
+            <input class="form__input" type="text" id="rev-role" name="role" placeholder="CEO, Acme Corp" />
+          </div>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="rev-rating">Rating</label>
+          <select class="form__input form__select" id="rev-rating" name="rating" required>
+            <option value="" disabled selected>Select rating</option>
+            <option value="5">★★★★★ — Exceptional</option>
+            <option value="4">★★★★☆ — Great</option>
+            <option value="3">★★★☆☆ — Good</option>
+            <option value="2">★★☆☆☆ — Fair</option>
+            <option value="1">★☆☆☆☆ — Poor</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="rev-text">Your review</label>
+          <textarea class="form__input form__textarea" id="rev-text" name="review" rows="4" required placeholder="What was it like working with Darren?"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--large">Submit review</button>
+        <div class="form__feedback" id="review-feedback" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
@@ -340,5 +396,6 @@
   </footer>
 
   <script src="reveal.js"></script>
+  <script src="reviews.js"></script>
 </body>
 </html>
