@@ -584,6 +584,212 @@ h1, h2, h3 {
 .footer__meta { font-size: 0.8rem; opacity: 0.5; text-align: right; }
 .footer__meta p + p { margin-top: var(--space-2); }
 
+/* ==================== STATEMENT HERO ==================== */
+.hero--statement {
+  display: block;
+  max-width: 900px;
+  padding-top: var(--space-48);
+  padding-bottom: var(--space-40);
+}
+.hero__inner--wide {
+  max-width: none;
+}
+.hero--statement .hero__headline {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+}
+.hero--statement .hero__subhead {
+  font-size: 1.15rem;
+  max-width: 620px;
+}
+
+/* ==================== BUILT MOCKUPS ==================== */
+.mock {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-card);
+}
+
+/* routing diagram */
+.mock--routing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: stretch;
+}
+.mock__node {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+  text-align: center;
+}
+.mock__node--center {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.mock__node--center .mock__node-title,
+.mock__node--center .mock__node-sub {
+  color: var(--on-primary);
+}
+.mock__node--accent {
+  border-color: var(--primary);
+  border-width: 2px;
+}
+.mock__node--verify {
+  background: var(--secondary);
+}
+.mock__node-title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: var(--space-1);
+}
+.mock__node-sub {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+.mock__branches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  position: relative;
+}
+
+/* signal card */
+.mock--signal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.mock__signal-caption {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+.mock__signal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.mock__signal-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--border);
+}
+.mock__signal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3d6b35;
+  flex-shrink: 0;
+}
+.mock__signal-pair {
+  font-weight: 600;
+  font-size: 1rem;
+  flex: 1;
+}
+.mock__signal-tf {
+  font-size: 0.75rem;
+  opacity: 0.55;
+  font-weight: 500;
+}
+.mock__signal-rows {
+  padding: var(--space-2) var(--space-6);
+}
+.mock__signal-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.mock__signal-row:last-child {
+  border-bottom: none;
+}
+.mock__signal-row span {
+  opacity: 0.65;
+}
+.mock__signal-row strong {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.mock__signal-row--tp strong {
+  color: var(--primary);
+}
+.mock__signal-foot {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-6);
+  background: var(--secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.mock__signal-note {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  text-align: center;
+  font-style: italic;
+}
+
+/* cadence strip */
+.mock--cadence {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.mock__cadence-rows {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.mock__cadence-row {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+.mock__cadence-row:last-child {
+  border-bottom: none;
+}
+.mock__cadence-row--accent {
+  background: var(--secondary);
+}
+.mock__cadence-time {
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--primary);
+}
+.mock__cadence-task {
+  font-size: 0.9rem;
+}
+
+/* responsive mocks */
+@media (max-width: 600px) {
+  .mock__branches {
+    grid-template-columns: 1fr;
+  }
+  .hero--statement {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; gap: var(--space-12); padding-top: var(--space-24); }

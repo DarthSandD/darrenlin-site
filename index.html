@@ -30,13 +30,9 @@
     <div class="nav__rule"></div>
   </header>
 
-  <!-- HERO: Statement fold with visual -->
-  <section class="hero" id="top">
-    <div class="hero__media" data-reveal>
-      <img src="assets/photos/hero-visual.jpg" alt="Technology workspace" class="hero__image" />
-      <div class="hero__media-overlay"></div>
-    </div>
-    <div class="hero__inner">
+  <!-- HERO: Statement fold (type-forward) -->
+  <section class="hero hero--statement" id="top">
+    <div class="hero__inner hero__inner--wide">
       <p class="hero__eyebrow" data-reveal>AI Automation Builder</p>
       <h1 class="hero__headline" data-reveal>
         Multi-model AI systems that execute real work.
@@ -109,8 +105,30 @@
         <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="noopener" class="btn btn--primary">Explore Hermes</a>
       </div>
       <div class="hermes__media" data-reveal>
-        <img src="assets/photos/orchestration.jpg" alt="Hermes orchestration visualization" class="hermes__image" />
-        <div class="hermes__media-accent"></div>
+        <div class="mock mock--routing" role="img" aria-label="Diagram of the multi-model routing flow: LongCat orchestrates, specialists execute, Solar reviews, tools verify">
+          <div class="mock__node mock__node--center">
+            <p class="mock__node-title">LongCat</p>
+            <p class="mock__node-sub">Orchestrator</p>
+          </div>
+          <div class="mock__branches">
+            <div class="mock__node">
+              <p class="mock__node-title">Ling</p>
+              <p class="mock__node-sub">Fast worker</p>
+            </div>
+            <div class="mock__node">
+              <p class="mock__node-title">Step</p>
+              <p class="mock__node-sub">Code worker</p>
+            </div>
+            <div class="mock__node mock__node--accent">
+              <p class="mock__node-title">Solar</p>
+              <p class="mock__node-sub">Reviewer</p>
+            </div>
+          </div>
+          <div class="mock__node mock__node--verify">
+            <p class="mock__node-title">Verify</p>
+            <p class="mock__node-sub">Tools confirm result</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -132,8 +150,35 @@
         </ul>
       </div>
       <div class="hermes__media" data-reveal>
-        <img src="assets/photos/workflow.jpg" alt="Trading signal workflow" class="hermes__image" />
-        <div class="hermes__media-accent"></div>
+        <div class="mock mock--signal" role="img" aria-label="Sample signal card showing the format: pair, direction, entry, stop loss, and take profit">
+          <p class="mock__signal-caption">Signal format</p>
+          <div class="mock__signal-card">
+            <div class="mock__signal-head">
+              <span class="mock__signal-dot"></span>
+              <p class="mock__signal-pair">XAUUSD · BUY</p>
+              <p class="mock__signal-tf">15m</p>
+            </div>
+            <div class="mock__signal-rows">
+              <div class="mock__signal-row">
+                <span>Entry</span>
+                <strong>2,412.30</strong>
+              </div>
+              <div class="mock__signal-row">
+                <span>Stop loss</span>
+                <strong>2,407.10</strong>
+              </div>
+              <div class="mock__signal-row mock__signal-row--tp">
+                <span>Take profit</span>
+                <strong>2,422.70</strong>
+              </div>
+            </div>
+            <div class="mock__signal-foot">
+              <span>0.01 lots</span>
+              <span>Max 2 / day</span>
+            </div>
+          </div>
+          <p class="mock__signal-note">Illustrative format, not a live signal</p>
+        </div>
       </div>
     </div>
   </section>
@@ -157,8 +202,28 @@
         <a href="https://www.instagram.com/darren.lin_ai" target="_blank" rel="noopener" class="btn btn--primary">See the account</a>
       </div>
       <div class="hermes__media" data-reveal>
-        <img src="assets/photos/hero-visual.jpg" alt="Content creation workspace" class="hermes__image" />
-        <div class="hermes__media-accent"></div>
+        <div class="mock mock--cadence" role="img" aria-label="Weekly schedule strip showing the daily content cadence">
+          <p class="mock__signal-caption">Daily cadence</p>
+          <div class="mock__cadence-rows">
+            <div class="mock__cadence-row">
+              <span class="mock__cadence-time">07:00</span>
+              <span class="mock__cadence-task">Trend scan</span>
+            </div>
+            <div class="mock__cadence-row">
+              <span class="mock__cadence-time">09:30</span>
+              <span class="mock__cadence-task">Carousel build + QC + post</span>
+            </div>
+            <div class="mock__cadence-row">
+              <span class="mock__cadence-time">10:00</span>
+              <span class="mock__cadence-task">YouTube Shorts package</span>
+            </div>
+            <div class="mock__cadence-row mock__cadence-row--accent">
+              <span class="mock__cadence-time">19:00</span>
+              <span class="mock__cadence-task">Reel concept + script</span>
+            </div>
+          </div>
+          <p class="mock__signal-note">Real schedule, runs every day</p>
+        </div>
       </div>
     </div>
   </section>
