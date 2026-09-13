@@ -1,18 +1,6 @@
-// Reviews - save to web3forms + localStorage, render on load
+// Reviews - save to Cloudflare Worker API + KV (shared across all visitors)
 (function () {
-  var STORAGE_KEY = 'darren-reviews';
-
-  function read() {
-    try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-    } catch (e) {
-      return [];
-    }
-  }
-
-  function write(list) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-  }
+  var API = '/api/reviews';
 
   function starStr(n) {
     return '★'.repeat(n) + '☆'.repeat(5 - n);
@@ -46,47 +34,57 @@
     var emptyEl = document.getElementById('reviews-empty');
     var form = document.getElementById('review-form-el');
     var feedback = document.getElementById('review-feedback');
-    if (!listEl || !form) return;
+    if (!listEl) return;
 
-    render(read(), listEl, emptyEl);
+    // Load reviews from shared API
+    fetch(API)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.success) render(data.data, listEl, emptyEl);
+      })
+      .catch(function () {
+        emptyEl.textContent = 'Could not load reviews.';
+      });
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      feedback.textContent = '';
-      var data = {
-        name: form.name.value.trim(),
-        role: form.role.value.trim(),
-        rating: parseInt(form.rating.value, 10),
-        review: form.review.value.trim(),
-        ts: Date.now()
-      };
-      if (!data.name || !data.review || !data.rating) {
-        feedback.textContent = 'Name, rating, and review are required.';
-        return;
-      }
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        feedback.textContent = '';
+        var body = {
+          name: form.name.value.trim(),
+          role: form.role.value.trim(),
+          rating: parseInt(form.rating.value, 10),
+          review: form.review.value.trim()
+        };
+        if (!body.name || !body.review || !body.rating) {
+          feedback.textContent = 'Name, rating, and review are required.';
+          return;
+        }
 
-      feedback.textContent = 'Saving...';
+        feedback.textContent = 'Saving...';
 
-      // Save locally immediately (always works)
-      var list = read();
-      list.unshift(data);
-      write(list);
-      render(list, listEl, emptyEl);
-
-      // Also POST to web3forms if key set
-      var key = (document.getElementById('review-web3forms-key') || {}).value;
-      var payload = new FormData(form);
-      if (key) {
-        payload.set('apikey', key);
-      }
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: payload
-      }).catch(function () {});
-
-      form.reset();
-      feedback.textContent = 'Thank you — review saved.';
-    });
+        fetch(API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.success) {
+              form.reset();
+              feedback.textContent = 'Thank you — review saved.';
+              return fetch(API).then(function (r) { return r.json(); });
+            } else {
+              feedback.textContent = data.error || 'Something went wrong.';
+              throw new Error('api error');
+            }
+          })
+          .then(function (data) {
+            if (data.success) render(data.data, listEl, emptyEl);
+          })
+          .catch(function () {});
+      });
+    }
 
     // More projects toggle
     var toggleBtn = document.getElementById('more-projects-btn');
@@ -96,7 +94,7 @@
         var expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
         toggleBtn.setAttribute('aria-expanded', !expanded);
         moreProjects.hidden = expanded;
-        toggleBtn.textContent = expanded ? 'See +4 more projects' : 'Hide projects';
+        toggleBtn.textContent = expanded ? 'See +1 more project' : 'Hide projects';
       });
     }
   }

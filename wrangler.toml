@@ -1,0 +1,9 @@
+name = "darrenlin"
+compatibility_date = "2024-09-01"
+
+[vars]
+SITE_URL = "https://darrenlin.pages.dev"
+
+[[kv_namespaces]]
+binding = "REVIEWS"
+id = "e316c0fa4a0a43c3a64c6fe5ef0096c0"
