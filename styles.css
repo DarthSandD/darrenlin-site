@@ -623,6 +623,21 @@ h1, h2, h3 {
   margin-bottom: var(--space-12);
 }
 
+/* ==================== MORE PROJECTS TOGGLE ==================== */
+.more-projects-toggle {
+  text-align: center;
+  padding: var(--space-16) var(--space-6);
+  background: var(--surface);
+}
+
+.more-projects {
+  background: var(--surface);
+}
+
+.more-projects .hermes:first-child {
+  padding-top: 0;
+}
+
 /* ==================== FOOTER ==================== */
 .footer {
   padding: var(--space-16) var(--space-6);

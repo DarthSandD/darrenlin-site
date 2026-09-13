@@ -87,6 +87,18 @@
       form.reset();
       feedback.textContent = 'Thank you — review saved.';
     });
+
+    // More projects toggle
+    var toggleBtn = document.getElementById('more-projects-btn');
+    var moreProjects = document.getElementById('more-projects');
+    if (toggleBtn && moreProjects) {
+      toggleBtn.addEventListener('click', function () {
+        var expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', !expanded);
+        moreProjects.hidden = expanded;
+        toggleBtn.textContent = expanded ? 'See +4 more projects' : 'Hide projects';
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
