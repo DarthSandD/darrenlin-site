@@ -101,7 +101,7 @@
         var expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
         toggleBtn.setAttribute('aria-expanded', !expanded);
         moreProjects.hidden = expanded;
-        toggleBtn.textContent = expanded ? 'See +1 more project' : 'Hide projects';
+        toggleBtn.textContent = expanded ? 'See +2 more projects' : 'Hide projects';
       });
     }
   }
