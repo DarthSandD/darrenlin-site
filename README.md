@@ -1,9 +1,9 @@
-# Darren Lin — AI Automation Builder
+# Darren Labs — Agentic AI Studio
 
-Personal brand site. Live at **https://darrenlin.pages.dev/**
+Company site for Darren Labs. Live at https://darrenlin.pages.dev/
 
-Three real project showcases (Hermes multi-model system, forex signals, content pipeline), capabilities, process, and a contact brief form.
+Deployed on Cloudflare Pages (`darrenlin` project). Static HTML/CSS/JS, zero build step.
 
-- Static HTML/CSS/JS, zero build step
-- Deployed on Cloudflare Pages (`darrenlin` project)
-- Design: elegant editorial, Gloock + Inter, contrast-verified palette
+Flagships: VoltWorks Power + AI Architecture Patterns. Interactive 3D: Three.js with 2D fallback.
+
+The previous personal portfolio is preserved on the `backup/personal-portfolio` branch.

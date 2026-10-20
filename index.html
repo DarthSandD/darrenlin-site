@@ -1,679 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Darren Lin - AI Automation Builder</title>
-  <meta name="description" content="Darren Lin builds multi-model AI systems that execute real work. Autonomous workflows, agent orchestration, and production-grade automation." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darren Labs — Agentic AI Studio</title>
+<meta name="description" content="Darren Labs is an Agentic AI Studio. We design and ship agentic AI systems that build real apps. Flagships: VoltWorks Power, MEP Suits, and AI Architecture Patterns.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- NAV: Editorial Masthead -->
-  <header class="nav" data-reveal>
-    <div class="nav__inner">
-      <a href="#top" class="nav__wordmark">Darren Lin</a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#work">Work</a>
-        <a href="#hermes">Hermes</a>
-        <a href="#contact">Contact</a>
-        <a href="#reviews">Reviews</a>
-      </nav>
-    </div>
-    <div class="nav__rule"></div>
-  </header>
-
-  <!-- HERO: Statement fold (type-forward) -->
-  <section class="hero hero--statement" id="top">
-    <div class="hero__inner hero__inner--wide">
-      <p class="hero__eyebrow" data-reveal>AI Automation Builder</p>
-      <h1 class="hero__headline" data-reveal>
-        Multi-model AI systems that execute real work.
-      </h1>
-      <p class="hero__subhead" data-reveal>
-        Agent orchestration, live-data systems, and the infrastructure that turns AI demos into shipped products — from a real-time earth-intelligence globe to engineering tools engineers actually use.
-      </p>
-      <div class="hero__actions" data-reveal>
-        <a href="#omni-eyes" class="btn btn--primary">See the work</a>
-        <a href="#contact" class="btn btn--ghost">Start a project</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK: Capabilities (cleaner, more visual) -->
-  <section class="section" id="work">
-    <div class="section__head" data-reveal>
-      <p class="section__index">01</p>
-      <h2 class="section__title">What I build</h2>
-    </div>
-
-    <div class="capabilities">
-      <div class="cap" data-reveal>
-        <div class="cap__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3 class="cap__title">Orchestration</h3>
-        <p class="cap__desc">Multi-model routing with fallback chains. The right model for each task. Verification loops at every step.</p>
-      </div>
-      <div class="cap" data-reveal>
-        <div class="cap__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </div>
-        <h3 class="cap__title">Automation</h3>
-        <p class="cap__desc">Workflow pipelines that run on schedule. Cron jobs, content generation, data processing. Zero manual steps.</p>
-      </div>
-      <div class="cap" data-reveal>
-        <div class="cap__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <h3 class="cap__title">Verification</h3>
-        <p class="cap__desc">Output validation, contrast checks, anti-slop scanning. No handoff without evidence. No assumed results.</p>
-      </div>
-      <div class="cap" data-reveal>
-        <div class="cap__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3 class="cap__title">Integration</h3>
-        <p class="cap__desc">API wiring, Composio connectors, MCP servers, custom tooling. Every service talks to every other.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HERMES: Project showcase (visual-forward) -->
-  <section class="hermes" id="hermes">
-    <div class="hermes__inner">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Featured Project</p>
-        <h2 class="hermes__title">Hermes Agent</h2>
-        <p class="hermes__lede">
-          A multi-model autonomous intelligence system running on Hermes Agent. Orchestrates LongCat, Solar Pro, Ling, and Step as specialized cognitive modules, routing each subtask to the model best suited for it.
-        </p>
-        <ul class="hermes__features">
-          <li>Dynamic model routing with fallback chains</li>
-          <li>Tool-first execution: real tools, not simulations</li>
-          <li>Verification-scaled-by-consequence</li>
-          <li>Persistent memory + procedural learning</li>
-          <li>18 cron jobs running production pipelines</li>
-        </ul>
-        <a href="https://hermes-agent.nousresearch.com" target="_blank" rel="noopener" class="btn btn--primary">Explore Hermes</a>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--routing" role="img" aria-label="Diagram of the multi-model routing flow: LongCat orchestrates, specialists execute, Solar reviews, tools verify">
-          <div class="mock__node mock__node--center">
-            <p class="mock__node-title">LongCat</p>
-            <p class="mock__node-sub">Orchestrator</p>
-          </div>
-          <div class="mock__branches">
-            <div class="mock__node">
-              <p class="mock__node-title">Ling</p>
-              <p class="mock__node-sub">Fast worker</p>
-            </div>
-            <div class="mock__node">
-              <p class="mock__node-title">Step</p>
-              <p class="mock__node-sub">Code worker</p>
-            </div>
-            <div class="mock__node mock__node--accent">
-              <p class="mock__node-title">Solar</p>
-              <p class="mock__node-sub">Reviewer</p>
-            </div>
-          </div>
-          <div class="mock__node mock__node--verify">
-            <p class="mock__node-title">Verify</p>
-            <p class="mock__node-sub">Tools confirm result</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRADING: Semi-auto forex signals (alternating split) -->
-  <section class="hermes hermes--plain" id="trading">
-    <div class="hermes__inner hermes__inner--flip">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Project 02</p>
-        <h2 class="hermes__title">Forex Signal System</h2>
-        <p class="hermes__lede">
-          A semi-automated forex signal pipeline on the 15-minute timeframe. Market scans run every 30 minutes, and every signal ships with entry, stop loss, and a single take profit. No noise, no second-guessing.
-        </p>
-        <ul class="hermes__features">
-          <li>Entry, stop loss, and single take profit on every signal</li>
-          <li>Fixed risk discipline: 0.01 lots, max 2 signals per day</li>
-          <li>Demo-first validation before anything touches live capital</li>
-          <li>Compact signal format built for fast mobile reads</li>
-        </ul>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--signal" role="img" aria-label="Sample signal card showing the format: pair, direction, entry, stop loss, and take profit">
-          <p class="mock__signal-caption">Signal format</p>
-          <div class="mock__signal-card">
-            <div class="mock__signal-head">
-              <span class="mock__signal-dot"></span>
-              <p class="mock__signal-pair">XAUUSD · BUY</p>
-              <p class="mock__signal-tf">15m</p>
-            </div>
-            <div class="mock__signal-rows">
-              <div class="mock__signal-row">
-                <span>Entry</span>
-                <strong>2,412.30</strong>
-              </div>
-              <div class="mock__signal-row">
-                <span>Stop loss</span>
-                <strong>2,407.10</strong>
-              </div>
-              <div class="mock__signal-row mock__signal-row--tp">
-                <span>Take profit</span>
-                <strong>2,422.70</strong>
-              </div>
-            </div>
-            <div class="mock__signal-foot">
-              <span>0.01 lots</span>
-              <span>Max 2 / day</span>
-            </div>
-          </div>
-          <p class="mock__signal-note">Illustrative format, not a live signal</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTENT: Daily content pipeline (alternating split) -->
-  <section class="hermes" id="content-pipeline">
-    <div class="hermes__inner">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Project 03</p>
-        <h2 class="hermes__title">Content Pipeline</h2>
-        <p class="hermes__lede">
-          A daily content engine for @darren.lin_ai. Trend scan every morning, carousel built by mid-morning, quality-checked, and posted. Reel concepts and YouTube Shorts packages run on the same rails every day.
-        </p>
-        <ul class="hermes__features">
-          <li>Daily trend scan feeding carousel, reel, and Shorts output</li>
-          <li>Build, quality-check, and post as separate pipeline stages</li>
-          <li>Reel scripts with hook, caption, and posting brief included</li>
-          <li>YouTube Shorts packages drafted daily, publish on approval</li>
-          <li>Runs on schedule without manual steps</li>
-        </ul>
-        <a href="https://www.instagram.com/darren.lin_ai" target="_blank" rel="noopener" class="btn btn--primary">See the account</a>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--cadence" role="img" aria-label="Weekly schedule strip showing the daily content cadence">
-          <p class="mock__signal-caption">Daily cadence</p>
-          <div class="mock__cadence-rows">
-            <div class="mock__cadence-row">
-              <span class="mock__cadence-time">07:00</span>
-              <span class="mock__cadence-task">Trend scan</span>
-            </div>
-            <div class="mock__cadence-row">
-              <span class="mock__cadence-time">09:30</span>
-              <span class="mock__cadence-task">Carousel build + QC + post</span>
-            </div>
-            <div class="mock__cadence-row">
-              <span class="mock__cadence-time">10:00</span>
-              <span class="mock__cadence-task">YouTube Shorts package</span>
-            </div>
-            <div class="mock__cadence-row mock__cadence-row--accent">
-              <span class="mock__cadence-time">19:00</span>
-              <span class="mock__cadence-task">Reel concept + script</span>
-            </div>
-          </div>
-          <p class="mock__signal-note">Real schedule, runs every day</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEE MORE TOGGLE -->
-  <div class="more-projects-toggle" data-reveal>
-    <button class="btn btn--ghost btn--large" id="more-projects-btn" aria-expanded="false">
-      See +2 more projects
-    </button>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Darren Labs home">
+      <span class="mark" aria-hidden="true">DL</span>
+      <span class="brand-text">Darren <span>Labs</span></span>
+      <span class="brand-tag">Agentic AI Studio</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav" aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#flagships">Flagships</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <div class="more-projects" id="more-projects" hidden>
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-single">
+      <p class="eyebrow">Agentic AI Studio</p>
+      <h1>Darren Labs</h1>
+      <p class="tagline">We design and ship agentic AI systems that build real apps.</p>
+      <p class="hero-sub">One person sets the direction. Agents build. A human checks.</p>
+      <p class="hero-cta"><a href="#story">See the story &darr;</a></p>
+      <p class="hero-note">Founded by Tri Adi S, known in his work as Darren Lieu.</p>
+    </div>
+  </section>
 
-  <!-- VOLTWORKS: Project 05 -->
-  <section class="hermes" id="voltworks">
-    <div class="hermes__inner hermes__inner--flip">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Project 05</p>
-        <h2 class="hermes__title">VoltsWorks Power Tools</h2>
-        <p class="hermes__lede">
-          A power system calculation toolkit for electrical engineers. In-browser calculator, Python CLI, and automated reporting — same formulas, three interfaces. Built for quick, verified power system studies.
-        </p>
-        <ul class="hermes__features">
-          <li>3 calculation modes: System, Transformer, Line/Load</li>
-          <li>4 presets: industrial, commercial, residential, utility</li>
-          <li>In-browser JS + Python CLI with identical formulas</li>
-          <li>Assessment rules: 50 kA, 5%, 80%, 90% checks</li>
-          <li>Auto-generated text + print reports</li>
-        </ul>
-        <a href="https://darthsandd.github.io/voltworks-power/" target="_blank" rel="noopener" class="btn btn--primary">View live tools</a>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--signal" role="img" aria-label="VoltsWorks power calculator showing transformer calculation results">
-          <p class="mock__signal-caption">Transformer preset</p>
-          <div class="mock__signal-card">
-            <div class="mock__signal-head">
-              <span class="mock__signal-dot"></span>
-              <p class="mock__signal-pair">3-Phase Power · Industrial</p>
-              <p class="mock__signal-tf">System</p>
-            </div>
-            <div class="mock__signal-rows">
-              <div class="mock__signal-row">
-                <span>Voltage</span>
-                <strong>480 V</strong>
-              </div>
-              <div class="mock__signal-row">
-                <span>Current</span>
-                <strong>601.4 A</strong>
-              </div>
-              <div class="mock__signal-row mock__signal-row--tp">
-                <span>Apparent power</span>
-                <strong>499.2 kVA</strong>
-              </div>
-            </div>
-            <div class="mock__signal-foot">
-              <span>√3 · kV/Ω</span>
-              <span>Assessment pass</span>
-            </div>
+  <section class="section story" id="story">
+    <div class="wrap">
+      <p class="section-label">The story</p>
+      <h2>Scroll — the studio builds itself.</h2>
+      <p class="section-lead">One scene. Four moments. Scroll and it builds.</p>
+      <div class="story-layout">
+        <div class="story-stage">
+          <div class="story-stage-inner">
+            <canvas id="story3d" class="viz-canvas" width="640" height="420" tabindex="0" aria-label="Interactive 3D story. Scroll builds the scene. Drag to orbit, click an item for one line of detail."></canvas>
+            <p class="viz-caption" id="story-caption" aria-live="polite">Drag to orbit &middot; Scroll builds the scene &middot; Click an item for one line.</p>
+            <noscript><p class="viz-caption">3D needs JavaScript. The site still works without it.</p></noscript>
           </div>
-          <p class="mock__signal-note">Illustrative format, not live data</p>
+        </div>
+        <div class="story-chapters">
+          <article class="story-chapter active" id="story-chapter-0" data-chapter="0">
+            <p class="chapter-num">01 &middot; Studio</p>
+            <h3>One person directs. Agents build. A human checks.</h3>
+            <p>Darren decides the goal and what &ldquo;good&rdquo; looks like. Agents build the first version. Darren checks it.</p>
+            <p class="rule">Brief &rarr; Generate &rarr; Verify &rarr; Fix &amp; re-verify.</p>
+          </article>
+          <article class="story-chapter" id="story-chapter-1" data-chapter="1">
+            <p class="chapter-num">02 &middot; VoltWorks Power</p>
+            <h3>Power-system CAD, without repetitive drafting.</h3>
+            <p>So engineers can design with confidence, and beginners can understand what they are looking at.</p>
+            <ul class="points">
+              <li><strong>True-scale 3D</strong> — 1 unit = 1 m, equipment you can inspect.</li>
+              <li><strong>SLD builder</strong> with its own 3D view.</li>
+              <li><strong>Calculators that explain themselves</strong> &middot; IEC 60364 / 60909, IEEE 1584-2018, NFPA 70E.</li>
+            </ul>
+          </article>
+          <article class="story-chapter" id="story-chapter-2" data-chapter="2">
+            <p class="chapter-num">03 &middot; AI Architecture Patterns</p>
+            <h3>Diagrams, tradeoffs, judgment.</h3>
+            <p>A visual design library for AI systems — what works, what it costs, and when not to use it.</p>
+            <ul class="points">
+              <li><strong>Visual patterns</strong> in plain language.</li>
+              <li><strong>Tradeoffs, not hype</strong> — gains, costs, and when it breaks.</li>
+              <li><strong>Runnable demos</strong> — try the idea, don&rsquo;t just read about it.</li>
+            </ul>
+          </article>
+          <article class="story-chapter" id="story-chapter-3" data-chapter="3">
+            <p class="chapter-num">04 &middot; Verify loop</p>
+            <h3>That is what an AI architect does.</h3>
+            <p>Design systems that build real software, again and again — and explain why.</p>
+          </article>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- KALIMANTAN AQI: Project 04 -->
-  <section class="hermes hermes--plain" id="kalimantan-aqi">
-    <div class="hermes__inner">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Project 04</p>
-        <h2 class="hermes__title">Kalimantan AQI &amp; Fire Tracker</h2>
-        <p class="hermes__lede">
-          Real-time air quality index and forest fire hotspot monitoring for Kalimantan, Indonesia. Live AQI for 6 cities, NASA FIRMS satellite fire data on an interactive dark map, auto-refreshing every 5 minutes.
-        </p>
-        <ul class="hermes__features">
-          <li>Real-time AQI for 6 Kalimantan cities via Open-Meteo</li>
-          <li>Fire hotspot map from NASA FIRMS satellite (MODIS + VIIRS)</li>
-          <li>Dark theme, mobile-ready, auto-refresh every 5 min</li>
-          <li>Cloudflare Pages + Workers, vanilla JS + Leaflet</li>
-        </ul>
-        <a href="https://kalimantan-aqi.pages.dev" target="_blank" rel="noopener" class="btn btn--primary">See live tracker</a>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--signal" role="img" aria-label="Kalimantan AQI tracker showing city readings and fire hotspot map">
-          <p class="mock__signal-caption">AQI snapshot</p>
-          <div class="mock__signal-card">
-            <div class="mock__signal-head">
-              <span class="mock__signal-dot"></span>
-              <p class="mock__signal-pair">Banjarmasin · Unhealthy</p>
-              <p class="mock__signal-tf">AQI 156</p>
-            </div>
-            <div class="mock__signal-rows">
-              <div class="mock__signal-row">
-                <span>PM2.5</span>
-                <strong>68.2 µg/m³</strong>
-              </div>
-              <div class="mock__signal-row">
-                <span>PM10</span>
-                <strong>89.4 µg/m³</strong>
-              </div>
-              <div class="mock__signal-row mock__signal-row--tp">
-                <span>Fire hotspots</span>
-                <strong>12 detected</strong>
-              </div>
-            </div>
-            <div class="mock__signal-foot">
-              <span>Auto-refresh 5 min</span>
-              <span>NASA FIRMS</span>
-            </div>
-          </div>
-          <p class="mock__signal-note">Illustrative format, not live data</p>
-        </div>
+  <section class="section" id="flagships">
+    <div class="wrap">
+      <p class="section-label">Flagships</p>
+      <h2>What the studio ships.</h2>
+      <div class="flagships">
+        <article class="flag-card flag-card-large">
+          <p class="chapter-num">Flagship &middot; Power</p>
+          <h3>VoltWorks Power</h3>
+          <p>Power-system CAD that removes repetitive drafting. True-scale 3D (1 unit = 1 m), an SLD builder with its own 3D view, and calculators that explain themselves.</p>
+          <p class="flag-standards">IEC 60364 / 60909 &middot; IEEE 1584-2018 &middot; NFPA 70E</p>
+        </article>
+        <article class="flag-card flag-card-large">
+          <p class="chapter-num">Flagship &middot; Building Services</p>
+          <h3>MEP Suits</h3>
+          <p>Building Services Mechanical Toolkit — built by an engineer, for the plant room. Eight calculators: Duct Sizer, Psychrometrics, Ventilation (ASHRAE 62.1), Pipe Hydraulics, Water &amp; Coil Loads, Fan Laws, Room Cooling Load, and Unit Converter — plus a 3D System Viewer (Outdoor AC unit, duct runs, industrial pipes) live-linked to Duct + Pipe.</p>
+          <p>Every tool shows its method / formula and checks against ASHRAE / CIBSE design bands. Design aid — results must be verified by a licensed engineer before construction / procurement.</p>
+        </article>
+        <article class="flag-card flag-card-compact">
+          <h3>AI Architecture Patterns</h3>
+          <p>A visual design library for AI systems — diagrams, tradeoffs, runnable demos, and when NOT to use it.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="hermes" id="omni-eyes">
-    <div class="hermes__inner hermes__inner--flip">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Featured Project</p>
-        <h2 class="hermes__title">Omni Eyes View</h2>
-        <p class="hermes__lede">
-          A real-time 3D earth-intelligence console. Live aircraft, vessels, satellites, wildfires and streaming public CCTV on an interactive Cesium globe — with a browser-native voice agent. Speak a place and the globe flies there.
-        </p>
-        <ul class="hermes__features">
-          <li>15+ open-data feeds — flights, ships, satellites, fires, quakes</li>
-          <li>Live public CCTV streams playing HLS inside the globe</li>
-          <li>Browser-native voice control, zero paid APIs</li>
-          <li>Identical builds shipped to two hosts, fully tested</li>
-          <li>Cloudflare Workers proxy — no API keys exposed client-side</li>
-        </ul>
-        <a href="https://darthsandd.github.io/omni-eyes-view/" target="_blank" rel="noopener" class="btn btn--primary">Open the globe</a>
-        <a href="https://github.com/DarthSandD/omni-eyes-view" target="_blank" rel="noopener" class="btn btn--ghost">View source</a>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--signal" role="img" aria-label="Omni Eyes View globe showing live aircraft, vessels and CCTV layers">
-          <p class="mock__signal-caption">Live globe layers</p>
-          <div class="mock__signal-card">
-            <div class="mock__signal-head">
-              <span class="mock__signal-dot"></span>
-              <p class="mock__signal-pair">Jakarta · Live CCTV</p>
-              <p class="mock__signal-tf">Streaming</p>
-            </div>
-            <div class="mock__signal-rows">
-              <div class="mock__signal-row">
-                <span>Aircraft tracked</span>
-                <strong>1,240</strong>
-              </div>
-              <div class="mock__signal-row">
-                <span>Vessels</span>
-                <strong>386</strong>
-              </div>
-              <div class="mock__signal-row mock__signal-row--tp">
-                <span>CCTV cameras live</span>
-                <strong>Streaming</strong>
-              </div>
-            </div>
-            <div class="mock__signal-foot">
-              <span>Cesium · HLS</span>
-              <span>15+ feeds</span>
-            </div>
-          </div>
-          <p class="mock__signal-note">Illustrative format, not live data</p>
-        </div>
-      </div>
+  <section class="section" id="architecture">
+    <div class="wrap narrow">
+      <p class="section-label">Architecture</p>
+      <h2>Why three flagships prove the architecture.</h2>
+      <p>VoltWorks and MEP Suits are systems: orchestration to build them, verification loops to check them, and coherent designs that hold calculators, 3D, and diagrams together. Patterns is the other half: the judgment behind choosing the right system in the first place.</p>
     </div>
   </section>
 
-  <section class="hermes hermes--plain" id="mep-suite">
-    <div class="hermes__inner">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Project 06</p>
-        <h2 class="hermes__title">MEP Engineering Suite</h2>
-        <p class="hermes__lede">
-          Interactive mechanical, electrical and plumbing calculators with live recalculation and single-line diagram generation. Professional building-services figures without heavyweight CAD or fragile spreadsheet templates.
-        </p>
-        <ul class="hermes__features">
-          <li>Live recalculation — results update as you type</li>
-          <li>Single-line diagram (SLD) generation with persistence</li>
-          <li>Electrical, HVAC and plumbing modules in one place</li>
-          <li>Companion toolkit with inspectable Python reference math</li>
-        </ul>
-        <a href="https://darthsandd.github.io/mep-engineering-suite/" target="_blank" rel="noopener" class="btn btn--primary">Open the suite</a>
-        <a href="https://darthsandd.github.io/mep-toolkit/" target="_blank" rel="noopener" class="btn btn--ghost">Browser toolkit</a>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--signal" role="img" aria-label="MEP engineering suite showing live recalculation and single-line diagram">
-          <p class="mock__signal-caption">Live calculation</p>
-          <div class="mock__signal-card">
-            <div class="mock__signal-head">
-              <span class="mock__signal-dot"></span>
-              <p class="mock__signal-pair">Cable sizing · Electrical</p>
-              <p class="mock__signal-tf">Live</p>
-            </div>
-            <div class="mock__signal-rows">
-              <div class="mock__signal-row">
-                <span>Design current</span>
-                <strong>142 A</strong>
-              </div>
-              <div class="mock__signal-row">
-                <span>Voltage drop</span>
-                <strong>3.8 %</strong>
-              </div>
-              <div class="mock__signal-row mock__signal-row--tp">
-                <span>Selected cable</span>
-                <strong>50 mm²</strong>
-              </div>
-            </div>
-            <div class="mock__signal-foot">
-              <span>Recalculates as you type</span>
-              <span>SLD ready</span>
-            </div>
-          </div>
-          <p class="mock__signal-note">Illustrative format, not live data</p>
-        </div>
-      </div>
+  <section class="section" id="about">
+    <div class="wrap narrow">
+      <p class="section-label">About</p>
+      <h2>Tri Adi S, known as Darren Lieu.</h2>
+      <p>Darren is CEO of Darren Labs. His goal is becoming an AI architect — setting direction while agents own execution, sequencing, and verification.</p>
     </div>
   </section>
 
-  <!-- AUTOCAD GUIDE: Project 07 -->
-  <section class="hermes" id="autocad-guide">
-    <div class="hermes__inner hermes__inner--flip">
-      <div class="hermes__content" data-reveal>
-        <p class="hermes__eyebrow">Project 07</p>
-        <h2 class="hermes__title">AutoCAD Hotkey &amp; Command Guide</h2>
-        <p class="hermes__lede">
-          A single-page reference for 126 AutoCAD commands. Every command carries its hotkey, a one-line description, and a video that starts at the exact second it is explained. No intros, no signup, no app.
-        </p>
-        <ul class="hermes__features">
-          <li>126 commands across 8 categories on one page</li>
-          <li>125 clips, each seeked to the moment it is explained</li>
-          <li>Search by name, hotkey, or plain description</li>
-          <li>Every video link hand-checked for dead and mismatched clips</li>
-          <li>Works on mobile, zero dependencies, no build step</li>
-        </ul>
-        <a href="https://darthsandd.github.io/autocad-guide/" target="_blank" rel="noopener" class="btn btn--primary">Open the guide</a>
-        <a href="https://github.com/DarthSandD/autocad-guide" target="_blank" rel="noopener" class="btn btn--ghost">View source</a>
-      </div>
-      <div class="hermes__media" data-reveal>
-        <div class="mock mock--signal" role="img" aria-label="AutoCAD guide showing command count, categories, and verified clips">
-          <p class="mock__signal-caption">Guide contents</p>
-          <div class="mock__signal-card">
-            <div class="mock__signal-head">
-              <span class="mock__signal-dot"></span>
-              <p class="mock__signal-pair">AutoCAD Commands · One page</p>
-              <p class="mock__signal-tf">Live</p>
-            </div>
-            <div class="mock__signal-rows">
-              <div class="mock__signal-row">
-                <span>Commands</span>
-                <strong>126</strong>
-              </div>
-              <div class="mock__signal-row">
-                <span>Categories</span>
-                <strong>8</strong>
-              </div>
-              <div class="mock__signal-row mock__signal-row--tp">
-                <span>Clips at exact timestamp</span>
-                <strong>125</strong>
-              </div>
-            </div>
-            <div class="mock__signal-foot">
-              <span>Search · filter · copy</span>
-              <span>No signup</span>
-            </div>
-          </div>
-          <p class="mock__signal-note">Live counts from the published guide</p>
-        </div>
-      </div>
+  <section class="section" id="contact">
+    <div class="wrap narrow">
+      <p class="section-label">Contact</p>
+      <h2>Start a conversation.</h2>
+      <p>LinkedIn: Tri Adi S &middot; Company page: Darren Labs — coming.</p>
     </div>
   </section>
+</main>
 
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&copy; 2026 Darren Labs — Agentic AI Studio</p>
+    <p>Built with agents, checked by humans. 3D models: Robot (CC0, Quaternius) &middot; Generator (CC0, Poly Haven) &middot; Pylon (BSD-3-Clause, smalltown2kt — lattice transmission tower).</p>
   </div>
-
-  <!-- WORKFLOW: Process (cleaner, more visual) -->
-  <section class="section section--alt" id="process">
-    <div class="section__head" data-reveal>
-      <p class="section__index">02</p>
-      <h2 class="section__title">How I work</h2>
-    </div>
-
-    <div class="workflow">
-      <div class="workflow__step" data-reveal>
-        <div class="workflow__num">1</div>
-        <div class="workflow__body">
-          <h3>Discover</h3>
-          <p>Map the actual workflow. Find the bottleneck. Define what "done" looks like.</p>
-        </div>
-      </div>
-      <div class="workflow__step" data-reveal>
-        <div class="workflow__num">2</div>
-        <div class="workflow__body">
-          <h3>Design</h3>
-          <p>Pick the right model for each subtask. Plan the routing, the fallbacks, the verification.</p>
-        </div>
-      </div>
-      <div class="workflow__step" data-reveal>
-        <div class="workflow__num">3</div>
-        <div class="workflow__body">
-          <h3>Build</h3>
-          <p>Ship the pipeline. Wire the connectors. Set the cron. Every output tested, not assumed.</p>
-        </div>
-      </div>
-      <div class="workflow__step" data-reveal>
-        <div class="workflow__num">4</div>
-        <div class="workflow__body">
-          <h3>Verify</h3>
-          <p>Run the scans. Confirm the result against the actual objective. No handoff without evidence.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT FORM -->
-  <section class="contact" id="contact">
-    <div class="contact__inner" data-reveal>
-      <div class="contact__header">
-        <p class="contact__eyebrow">Get in touch</p>
-        <h2 class="contact__title">Have a workflow that should run itself?</h2>
-        <p class="contact__subhead">Tell me what you're trying to automate. I'll read every message and respond within two business days.</p>
-      </div>
-
-      <form class="form" id="contact-form">
-        <input type="hidden" name="apikey" value="2a3ce100-4433-4f2b-afb0-b15483befc9f" id="web3forms-key" />
-        <input type="hidden" name="subject" value="New inquiry from darrenlin.ai" />
-        <input type="hidden" name="from_name" value="Darren Lin - AI Automation Builder" />
-        <input type="checkbox" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-
-        <div class="form__row">
-          <div class="form__field">
-            <label for="form-name" class="form__label">Your name</label>
-            <input type="text" id="form-name" name="name" class="form__input" required placeholder="Your full name" />
-          </div>
-          <div class="form__field">
-            <label for="form-email" class="form__label">Email</label>
-            <input type="email" id="form-email" name="email" class="form__input" required placeholder="your@email.com" />
-          </div>
-        </div>
-
-        <div class="form__field">
-          <label for="form-company" class="form__label">Company <span class="form__optional">optional</span></label>
-          <input type="text" id="form-company" name="company" class="form__input" placeholder="Your company name" />
-        </div>
-
-        <div class="form__field">
-          <label for="form-budget" class="form__label">Budget range <span class="form__optional">optional</span></label>
-          <select id="form-budget" name="budget" class="form__input form__select">
-            <option value="" disabled selected>Select a range</option>
-            <option value="under-5k">Under $5k</option>
-            <option value="5k-15k">$5k – $15k</option>
-            <option value="15k-50k">$15k – $50k</option>
-            <option value="50k-plus">$50k+</option>
-          </select>
-        </div>
-
-        <div class="form__field">
-          <label for="form-message" class="form__label">Project description</label>
-          <textarea id="form-message" name="message" class="form__input form__textarea" rows="5" required placeholder="Describe the workflow you want automated. Current tools, volume, where it breaks, what 'done' looks like."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn--primary btn--large form__submit" id="form-submit">
-          Send brief
-        </button>
-
-        <div class="form__feedback" id="form-feedback" role="status" aria-live="polite"></div>
-      </form>
-
-      <p class="contact__note">Currently available for two engagements per month.</p>
-    </div>
-  </section>
-
-
-  <section class="reviews" id="reviews">
-    <div class="reviews__inner" data-reveal>
-      <div class="section__head">
-        <p class="section__index">03</p>
-        <h2 class="section__title">Client reviews</h2>
-      </div>
-      <div class="reviews__list" id="reviews-list"></div>
-      <div class="reviews__empty" id="reviews-empty">No reviews yet. Be the first.</div>
-    </div>
-  </section>
-
-  <!-- REVIEW FORM -->
-  <section class="contact reviews-form" id="review-form">
-    <div class="contact__inner" data-reveal>
-      <div class="contact__header">
-        <p class="contact__eyebrow">Leave a review</p>
-        <h2 class="contact__title">How was your experience?</h2>
-      </div>
-      <form class="form" id="review-form-el">
-        <input type="hidden" name="subject" value="New client review for Darren Lin" />
-        <input type="hidden" name="from_name" value="Darren Lin - AI Automation Builder" />
-        <input type="checkbox" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-        <div class="form__row">
-          <div class="form__field">
-            <label class="form__label" for="rev-name">Your name</label>
-            <input class="form__input" type="text" id="rev-name" name="name" required placeholder="Your full name" />
-          </div>
-          <div class="form__field">
-            <label class="form__label" for="rev-role">Role / Company <span class="form__optional">optional</span></label>
-            <input class="form__input" type="text" id="rev-role" name="role" placeholder="CEO, Acme Corp" />
-          </div>
-        </div>
-        <div class="form__field">
-          <label class="form__label" for="rev-rating">Rating</label>
-          <select class="form__input form__select" id="rev-rating" name="rating" required>
-            <option value="" disabled selected>Select rating</option>
-            <option value="5">★★★★★ — Exceptional</option>
-            <option value="4">★★★★☆ — Great</option>
-            <option value="3">★★★☆☆ — Good</option>
-            <option value="2">★★☆☆☆ — Fair</option>
-            <option value="1">★☆☆☆☆ — Poor</option>
-          </select>
-        </div>
-        <div class="form__field">
-          <label class="form__label" for="rev-text">Your review</label>
-          <textarea class="form__input form__textarea" id="rev-text" name="review" rows="4" required placeholder="What was it like working with Darren?"></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary btn--large">Submit review</button>
-        <div class="form__feedback" id="review-feedback" role="status" aria-live="polite"></div>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <p class="footer__wordmark">Darren Lin</p>
-        <p class="footer__tagline">AI Automation Builder</p>
-      </div>
-      <div class="footer__meta">
-        <p>&copy; 2026 Darren Lin</p>
-        <p>Built with Hermes Agent</p>
-        <!-- sc-credit-marker -->
-<div class="site-credit site-credit--inline">
-  <p class="sc-made">Built by <strong>Darren Lieu</strong>
-    <span class="sc-links sc-links--inline"><a href="https://github.com/DarthSandD" target="_blank" rel="noopener">GitHub</a><span>·</span><a href="https://darrenlin.pages.dev/" target="_blank" rel="noopener">Portfolio</a><span>·</span><a href="https://www.instagram.com/darren.lin_ai" target="_blank" rel="noopener">@darren.lin_ai</a></span>
-  </p>
-  <a class="sc-saweria" href="https://saweria.co/darren111" target="_blank" rel="noopener" aria-label="Support Darren Lieu on Saweria">
-    <span class="sc-cup" aria-hidden="true">☕</span> Support on Saweria
-  </a>
-</div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="reveal.js"></script>
-  <script src="reviews.js"></script>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
